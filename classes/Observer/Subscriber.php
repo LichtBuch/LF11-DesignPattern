@@ -10,7 +10,8 @@ class Subscriber
         Publisher::getUserPublisher()->subscribe($this, $immediate);
     }
 
-    public function update(mixed $data){
+    public function update(mixed $data): void
+    {
         $callback = $this->callback;
         $callback($data);
     }
