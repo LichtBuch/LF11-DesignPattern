@@ -4,8 +4,8 @@ class PaymentsFacade
 {
 
     public function __construct(
-        private readonly UserDao $userDao = new UserDao(),
-        private readonly PaymentDao $paymentDao = new PaymentDao()
+        private readonly UserRepository    $userDao = new UserRepository(),
+        private readonly PaymentRepository $paymentDao = new PaymentRepository()
     ){}
 
     /**

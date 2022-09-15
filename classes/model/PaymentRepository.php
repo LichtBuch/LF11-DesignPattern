@@ -1,6 +1,6 @@
 <?php
 
-class PaymentDao{
+class PaymentRepository{
 
     private array $payments;
 
