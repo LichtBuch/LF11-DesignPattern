@@ -1,5 +1,11 @@
 <?php
 
+namespace DesignPatterns\Facade;
+
+use DesignPatterns\Model\Payment;
+use DesignPatterns\Model\PaymentRepository;
+use DesignPatterns\Model\UserRepository;
+
 class PaymentsFacade
 {
 

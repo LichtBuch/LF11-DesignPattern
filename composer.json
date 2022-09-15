@@ -1,0 +1,15 @@
+{
+    "name": "k/lf11-design-pattern2",
+    "autoload": {
+        "psr-4": {
+            "DesignPatterns\\": "classes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "LichtBuch",
+            "email": "91839302+LichtBuch@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}

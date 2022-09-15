@@ -1,5 +1,7 @@
 <?php
 
+namespace DesignPatterns\Model;
+
 class User{
 
     public function __construct(

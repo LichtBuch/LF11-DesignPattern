@@ -1,9 +1,11 @@
 <?php
 
-$factory = new ControllerFactory();
-$controller = $factory->getController($_GET['route'] ?? '/');
-$controller->run();
+include_once __DIR__ . '/vendor/autoload.php';
 
-$userSubscriber = new Subscriber(function (User $user){
-    echo json_encode($user, JSON_PRETTY_PRINT);
-}, true);
+use DesignPatterns\Factory\ControllerFactory;
+
+
+
+$factory = new ControllerFactory();
+$controller = $factory->getController($_GET['route'] ?? '');
+$controller->run();

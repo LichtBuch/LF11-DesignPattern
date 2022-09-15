@@ -1,5 +1,7 @@
 <?php
 
+namespace DesignPatterns\Controller;
+
 abstract class Controller
 {
 

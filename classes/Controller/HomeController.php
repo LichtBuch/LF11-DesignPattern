@@ -1,16 +1,22 @@
 <?php
 
+namespace DesignPatterns\Controller;
+
+use DesignPatterns\Facade\PaymentsFacade;
+
 class HomeController extends Controller
 {
     public function __construct(
         private readonly PaymentsFacade $paymentsFacade
     ){
-        parent::__construct(__DIR__ . '/template.php');
+        parent::__construct(__DIR__ . '/homeTemplate.php');
     }
 
     public function run()
     {
-        $this->render(['payments' => $this->paymentsFacade->getMyPayments()]);
+        echo $this->render([
+            'payments' => $this->paymentsFacade->getMyPayments()
+        ]);
     }
 
 }

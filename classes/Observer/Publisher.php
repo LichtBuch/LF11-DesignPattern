@@ -1,5 +1,8 @@
 <?php
 
+namespace DesignPatterns\Observer;
+
+
 class Publisher{
 
     /**

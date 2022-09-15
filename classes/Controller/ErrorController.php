@@ -1,5 +1,7 @@
 <?php
 
+namespace DesignPatterns\Controller;
+
 class ErrorController extends Controller
 {
 

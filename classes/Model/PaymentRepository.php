@@ -1,5 +1,7 @@
 <?php
 
+namespace DesignPatterns\Model;
+
 class PaymentRepository{
 
     private array $payments;
@@ -16,7 +18,7 @@ class PaymentRepository{
      * @return Payment[]
      */
     public function findByUser(User $user): array{
-        return array_map(fn(Payment $payment) => $payment->getUserID() === $user->getId(), $this->payments);
+        return array_filter($this->payments, fn(Payment $payment) => $payment->getUserID() === $user->getId());
     }
 
 }

@@ -1,5 +1,9 @@
 <?php
 
+namespace DesignPatterns\Model;
+
+use DesignPatterns\Observer\Publisher;
+
 class UserRepository{
 
     private User $user;

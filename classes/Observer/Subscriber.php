@@ -1,5 +1,7 @@
 <?php
 
+namespace DesignPatterns\Observer;
+
 class Subscriber
 {
 
@@ -12,8 +14,7 @@ class Subscriber
 
     public function update(mixed $data): void
     {
-        $callback = $this->callback;
-        $callback($data);
+        ($this->callback)($data);
     }
 
 }
