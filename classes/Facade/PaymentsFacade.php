@@ -4,16 +4,16 @@ class PaymentsFacade
 {
 
     public function __construct(
-        private readonly UserRepository    $userDao = new UserRepository(),
-        private readonly PaymentRepository $paymentDao = new PaymentRepository()
+        private readonly UserRepository    $userRepository = new UserRepository(),
+        private readonly PaymentRepository $paymentRepository = new PaymentRepository()
     ){}
 
     /**
      * @return Payment[]
      */
     public function getMyPayments(): array{
-        $user = $this->userDao->find();
-        return $this->paymentDao->findByUser($user);
+        $user = $this->userRepository->find();
+        return $this->paymentRepository->findByUser($user);
     }
 
 }
